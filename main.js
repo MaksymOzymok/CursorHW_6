@@ -59,6 +59,7 @@ console.log(getStudentsInfo(students[0]));
 const getStudentsNames = (students) => students.map( value=> value.name).sort();
 console.log('Students names:');
 console.log(getStudentsNames(students));
+
 const getBestStudent = (students) =>{
     let temp = {},max = 0;
     temp.name = '';
@@ -73,6 +74,8 @@ const getBestStudent = (students) =>{
     }
     return temp.name;
 };
+
+
 console.log('Best student:');
 console.log(getBestStudent(students));
 const calculateWordLetters = (str) => {
@@ -87,4 +90,4 @@ const calculateWordLetters = (str) => {
     return obj;
 };
 console.log('CalculateWordLetters:');
-console.log(calculateWordLetters('test'));
+console.log(JSON.stringify(calculateWordLetters('test')));
