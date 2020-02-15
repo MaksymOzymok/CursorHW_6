@@ -30,6 +30,7 @@ const getSubjects = (student) => {
     Object.keys(k).forEach(value => rezult.push((value[0].toUpperCase() + value.slice(1,value.length)).replace('_',' ')));
     return rezult;
 };
+console.log('Subjects:');
 console.log(getSubjects(students[0]));
 let getAverageMark = (student) =>{
     let temp = student.subjects;
@@ -43,6 +44,7 @@ let getAverageMark = (student) =>{
     }
 return (total / k).toFixed(2);
 };
+console.log('AverageMark:');
 console.log(getAverageMark(students[0]));
 const getStudentsInfo = (student) =>{
     let temp = {};
@@ -51,9 +53,11 @@ const getStudentsInfo = (student) =>{
      temp.averageMark = getAverageMark(student);
     return temp;
 };
+console.log('Student info:');
 console.log(getStudentsInfo(students[0]));
 
 const getStudentsNames = (students) => students.map( value=> value.name).sort();
+console.log('Students names:');
 console.log(getStudentsNames(students));
 const getBestStudent = (students) =>{
     let temp = {},max = 0;
@@ -69,6 +73,7 @@ const getBestStudent = (students) =>{
     }
     return temp.name;
 };
+console.log('Best student:');
 console.log(getBestStudent(students));
 const calculateWordLetters = (str) => {
     let obj = {};
@@ -81,5 +86,5 @@ const calculateWordLetters = (str) => {
     }
     return obj;
 };
-
+console.log('CalculateWordLetters:');
 console.log(calculateWordLetters('test'));
